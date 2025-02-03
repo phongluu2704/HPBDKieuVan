@@ -1,7 +1,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <HTML>
  <HEAD>
-  <TITLE> My Heart </TITLE>
+  <TITLE> New Document </TITLE>
   <META NAME="Generator" CONTENT="EditPlus">
   <META NAME="Author" CONTENT="">
   <META NAME="Keywords" CONTENT="">
@@ -11,8 +11,7 @@
       height: 100%;
       padding: 0;
       margin: 0;
-      background: #1C1C1C;
-/*      background-image: url('ngiu1.jpg');*/
+      background: #64004B;
       background-size: 20%;
       background-position: center;
     }
@@ -32,7 +31,35 @@
       z-index: 2;
       width: 120px;
       height: 110px;
+    }
 
+    /* Add styles for the GIFs in the corners */
+    .corner-gif {
+      position: absolute;
+      width: 150px; /* Adjust size of GIF as needed */
+      height: 150px; /* Adjust size of GIF as needed */
+      z-index: 3;
+    }
+
+    /* Positioning the GIFs in each corner */
+    #top-left {
+      top: 120px;
+      left: 120px;
+    }
+
+    #top-right {
+      top: 120px;
+      right: 120px;
+    }
+
+    #bottom-left {
+      bottom: 120px;
+      left: 120px;
+    }
+
+    #bottom-right {
+      bottom: 120px;
+      right: 120px;
     }
   </style>
  </HEAD>
@@ -40,6 +67,12 @@
  <BODY>
   <!-- Add the centered image -->
   <img id="centeredImage" src="hydangiu.png" alt="Centered Image">
+
+  <!-- Add GIFs in each corner -->
+  <img id="top-left" class="corner-gif" src="gif1.gif" alt="Top Left GIF">
+  <img id="top-right" class="corner-gif" src="gif2.gif" alt="Top Right GIF">
+  <img id="bottom-left" class="corner-gif" src="gif3.gif" alt="Bottom Left GIF">
+  <img id="bottom-right" class="corner-gif" src="gif4.gif" alt="Bottom Right GIF">
 
   <canvas id="pinkboard"></canvas>
   <script>
@@ -55,9 +88,6 @@
         size: 30, // particle size in pixels
       },
     };
-
-    // (Rest of your existing JavaScript code here)
-    // Ensure that your JavaScript handles the particle effects as in your initial code
 
     /*
      * RequestAnimationFrame polyfill by Erik Möller
